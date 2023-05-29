@@ -9,3 +9,6 @@ function changeBackgroundImage() {
 }
 
 setInterval(changeBackgroundImage, interval);
+function toggleMobileMenu(menu) {
+  menu.classList.toggle('open');
+}
