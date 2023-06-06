@@ -14,7 +14,7 @@
     <title>Document</title>
 </head>
 <header>
-    <div id="brand"><a href="/">ImageForge</a></div>
+    <div id="brand"><a href="../Imagify/index.html">ImageForge</a></div>
     <nav>
       <ul>
         <li><a href="../Imagify/index.html">Home</a></li>
@@ -41,11 +41,18 @@
         <div class="input-container">
             <p class="input-text">Description</p>
             <input type="text" placeholder="Type your description">
-            <button class="custom-button">Generate Image</button>
+            <button class="custom-button" id="submit-icon">Generate Image</button>
         </div>
-        <div class="image-generation">
-            <img class="wood"src="images/DALL·E 2023-05-25 12.52.39 - a wooden frame with transparent background-edited.png" alt="">
-        </div>
+        <div class="image-container"></div>
+    </div>
+    <div class="mobile-create">
+      <section class="images-section"></section>
+      <section class="bottom-section">
+          <div class="input-container">
+              <input/>
+              <div id="submit-icon">➢</div>
+          </div>
+      </section>
     </div>
     <script src="main.js"></script>
 </body>

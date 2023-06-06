@@ -20,6 +20,11 @@ header a {
     display: flex;
     justify-content: space-between;
   }
+  .image-container{
+    background: url(images/DALL·E\ 2023-05-25\ 12.52.39\ -\ a\ wooden\ frame\ with\ transparent\ background-edited.png);
+    height: 500px;
+    width: 472px;
+  }
   #brand {
     font-weight: bold;
     font-size: 18px;
@@ -163,4 +168,37 @@ input[type="text"] {
 .wood{
     width: 500px;
     height: 500px;
+}
+.mobile-create{
+  display: none;
+}
+@media only screen and (max-width: 600px){
+  .content{
+    display: none;
+  }
+
+.bottom-section{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+}
+.input-container{
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+}
+input{
+  width: 100%; 
+  border: none;
+  font-size: 20px;
+  padding: 10px; 
+  border-radius: 5px;
+  
+}
+/*#submit-icon{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}*/
 }
