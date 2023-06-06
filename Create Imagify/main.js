@@ -13,7 +13,7 @@ function toggleMobileMenu(menu) {
   menu.classList.toggle('open');
 }
 
-const API_KEY="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";
+const API_KEY="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";
 const submitIcon=document.querySelector("#submit-icon");
 const inputElement=document.querySelector("input");
 const imageSection=document.querySelector('.image-section')
@@ -32,26 +32,27 @@ const getImages=async()=>{
         })
     }
     try {
-        const response = await fetch('https://api.openai.com/v1/images/generations', options);
-        const data = await response.json();
-      
-        if (data && data.data && Array.isArray(data.data)) {
-          data.data.forEach((imageObject) => {
-            const ImageContainer = document.createElement('div');
-            ImageContainer.classList.add('image-container');
-      
-            const imageElement = document.createElement('img');
-            imageElement.setAttribute('src', imageObject.url);
-      
-            ImageContainer.append(imageElement);
-            imageSection.append(ImageContainer);
-          });
-        } else {
-          throw new Error('Invalid data structure');
-        }
-      } catch (error) {
-        console.error(error);
+      const response = await fetch('https://api.openai.com/v1/images/generations', options);
+      const data = await response.json();
+      const imageContainer = document.querySelector('.image-container');
+    
+      if (data && data.data && Array.isArray(data.data)) {
+        data.data.forEach((imageObject) => {
+    
+          const imageElement = document.createElement('img');
+          imageElement.src = imageObject.url;
+          imageElement.alt = inputElement.value;
+          imageElement.classList.add('image');
+    
+          imageContainer.appendChild(imageElement);
+          console.log('imageContainer', imageContainer);
+        });
+      } else {
+        throw new Error('Invalid data structure');
       }
-    }   
+    } catch (error) {
+      console.error(error);
+    }
+  }  
 /*custom-button.addEventListener('click',getImages);*/
 submitIcon.addEventListener('click',getImages);

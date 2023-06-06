@@ -122,7 +122,9 @@ h1{
     justify-content: center;
     margin-left: 100px;
 }
-  
+.creatify-heading{
+  font-size: 2rem;
+}
 input[type="text"] {
     width: 100%;
     height: fit-content;
@@ -164,6 +166,12 @@ input[type="text"] {
 .image-generation{
     margin: 40px;
     
+}
+.image-container{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 .wood{
     width: 500px;
