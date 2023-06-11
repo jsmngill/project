@@ -7,8 +7,9 @@
 }
 body{
     background:url(images/Image1.jpg) no-repeat center center/ cover;
-    height: 100vh;
+    /*height: 100vh;*/
     transition: background-image 0.5s ease;
+    width: 100vw;
 }
 header a {
     text-decoration: none;
@@ -19,6 +20,7 @@ header a {
     height: 50px;
     display: flex;
     justify-content: space-between;
+    /*width: 100vw;*/
   }
   .image-container{
     background: url(images/DALL·E\ 2023-05-25\ 12.52.39\ -\ a\ wooden\ frame\ with\ transparent\ background-edited.png);
@@ -56,6 +58,7 @@ header a {
     margin: auto 0;
     display: none;
     cursor: pointer;
+    /*width: 100%;*/
   }
   #hamburger-icon div {
     width: 35px;
@@ -92,6 +95,9 @@ header a {
   .mobile-menu li {
     margin-bottom: 10px;
   }
+  .creatify-heading{
+    text-align: center;
+  }
   @media only screen and (max-width: 600px) {
     header nav {
       display: none;
@@ -100,6 +106,9 @@ header a {
     #hamburger-icon {
       display: block;
     }
+    /*.menu{
+      float: right;
+    }*/
   }
 h1{
     font-family: 'Poppins', sans-serif;
@@ -151,7 +160,7 @@ input[type="text"] {
     cursor: pointer;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
     transition: background-color 0.3s, box-shadow 0.3s;
-    margin: 20px 0;
+    margin: 20px 0px;
 }
   
   .custom-button:hover {
@@ -181,32 +190,34 @@ input[type="text"] {
   display: none;
 }
 @media only screen and (max-width: 600px){
-  .content{
-    display: none;
-  }
-
-.bottom-section{
-    width: 100%;
-    display:flex;
-    justify-content: center;
-}
 .input-container{
-    width: 100%;
-    max-width: 600px;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  margin:auto;
 }
-input{
-  width: 100%; 
-  border: none;
-  font-size: 20px;
-  padding: 10px; 
-  border-radius: 5px;
-  
+.content{
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
 }
-/*#submit-icon{
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-}*/
+.image-container{
+  background: none;
+}
+.input-text{
+  display: none;
+}
+.image-container{
+  height: 50vh;
+}
+.holder{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+}
+@media (min-width: 768px) and (max-width: 1023px){
+  .input-container{
+    margin: 0;
+  }
 }

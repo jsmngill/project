@@ -1,6 +1,6 @@
-var images = ['images/Image1.jpg', 'images/image2.jpg', 'images/image3.jpg','images/image4.jpg']; // Array of image URLs
+var images = ['images/Image1.jpg', 'images/image2.jpg', 'images/image3.jpg','images/image4.jpg']; 
 var currentIndex = 0;
-var interval = 60000; // Change image every 5 seconds (adjust as needed)
+var interval = 60000; 
 
 function changeBackgroundImage() {
   currentIndex = (currentIndex + 1) % images.length;
@@ -13,7 +13,7 @@ function toggleMobileMenu(menu) {
   menu.classList.toggle('open');
 }
 
-const API_KEY="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";
+const API_KEY="";
 const submitIcon=document.querySelector("#submit-icon");
 const inputElement=document.querySelector("input");
 const imageSection=document.querySelector('.image-section')
@@ -43,7 +43,6 @@ const getImages=async()=>{
           imageElement.src = imageObject.url;
           imageElement.alt = inputElement.value;
           imageElement.classList.add('image');
-    
           imageContainer.appendChild(imageElement);
           console.log('imageContainer', imageContainer);
         });
@@ -54,5 +53,30 @@ const getImages=async()=>{
       console.error(error);
     }
   }  
-/*custom-button.addEventListener('click',getImages);*/
+
 submitIcon.addEventListener('click',getImages);
+
+
+/*function downloadFile() {
+    var apiUrl = imageObject.url;
+    var link = document.createElement("a");
+    link.style.display = "none";
+    document.body.appendChild(link);
+    link.href = apiUrl;
+    link.download = "imageforge.jpg";
+    link.click();
+    document.body.removeChild(link);
+  }*/
+  async function downloadImage(imageObject) {
+    const image = await fetch(imageObject)
+    const imageBlog = await image.blob()
+    const imageURL = URL.createObjectURL(imageBlog)
+  
+    const link = document.createElement('a')
+    link.href = imageURL
+    link.download = 'ImageForge'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  }
+  downloadImages.addEventListener('click',downloadImage)
