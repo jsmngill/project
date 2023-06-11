@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300;1,400&family=Poppins:ital,wght@0,200;0,400;1,200;1,300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;500;700&family=Poppins:ital,wght@0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>ImageForge/Create</title>
+</head>
+<header>
+    <div id="brand"><a href="../Imagify/index.html">ImageForge</a></div>
+    <nav>
+      <ul>
+        <li><a href="../Imagify/index.html">Home</a></li>
+        <li><a href="../Create Imagify/index.html">Create</a></li>
+        <li><a href="../Gallery/index.html">Gallery</a></li>
+      </ul>
+    </nav>
+    <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      <ul class="mobile-menu">
+        <li><a href="../Imagify/index.html">Home</a></li>
+        <li><a href="../Create Imagify/index.html">Create</a></li>
+        <li><a href="../Gallery/index.html">Gallery</a></li>
+      </ul>
+    </div>
+  </header>
+<body>
+    <div class="heading">
+        <h1 class="creatify-heading">Hey there! Image Forge is here to help you!</h1>
+    </div>
+    <div class="content">
+        <div class="input-container">
+            <p class="input-text">Description</p>
+            <input class="holder" type="text" placeholder="Type your description">
+            <div class="gen-button"><button class="custom-button" id="submit-icon">Generate Image</button>
+              <button class="custom-button" id="downloadImages" onclick="downloadImage">Download Image</button></div>
+            <!--<button class="custom-button" id="submit-icon">Generate Image</button>-->
+        </div>
+        <div class="image-container" id="url"></div>
+    </div>
+    <div class="mobile-create">
+      <!--<section class="images-section"></section>
+      <section class="bottom-section">
+          <div class="input-container">
+              <input/>
+              <div id="submit-icon">➢</div>
+          </div>
+      </section>-->
+        </div>
+    <script src="main.js"></script>
+</body>
+</html>
